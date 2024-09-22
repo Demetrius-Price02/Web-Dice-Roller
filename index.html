@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Dice Roller</title>
+    <style>
+        body {
+            font:  Verdana, sans-serif;
+            background-image: url(casino.png);
+        }
+
+        h1 {
+            color: crimson;
+            padding: auto;
+            margin: 0%;
+            text-align: center;
+            font-size: 70px;
+            background-color: black;
+        }
+
+        p {
+            color: crimson;
+            text-align: center;
+            font-size: 30px;
+            background-color: black;
+        }
+
+        .dice{
+            display: flex;
+        }
+
+        .die {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .btn {
+            text-align: center;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+    <audio id= "audio1" onloadeddata="setVolume()" controls loop>
+        <source src="playdice.mp3" type="audio/mpeg">
+
+    </audio> <!-- Music cause I thought it would be fun-->
+
+</head>
+
+<body>
+    <h1>Dice Roller</h1>
+    <p> Click to the roll dice and test your luck!</p>
+
+    <h1 id="sum"></h1>
+    <h1 id="sum2"></h1>
+    <div class="dice" id="die1">
+        <img class="img1" src="dice.png">
+    </div>
+    <div class="dice" id="die2">
+        <img class="img2" src="dice.png">
+    </div>
+    <button class="btn" onclick="RollDice()">Roll Dice</button>
+    <script src="script.js"></script>
+</body>
+</html>
